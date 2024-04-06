@@ -39,11 +39,10 @@ public class SolutionActivity extends AppCompatActivity {
 
         showAns.setText(ans);
         wV.loadUrl("https://www.google.com/search?q=" + a + "x%5E2%2B" + b + "*x%2B" + c);
-
     }
 
     public void solveEquation(){
-        discriminant = b*b - 4*a*c;
+        discriminant = b*b-4*a*c;
         root1 = (-b + Math.sqrt(discriminant))/(2*a);
         root2 = (-b - Math.sqrt(discriminant))/(2*a);
     }

@@ -38,7 +38,8 @@ public class SolutionActivity extends AppCompatActivity {
         createAns();
 
         showAns.setText(ans);
-        wV.loadUrl("https://www.google.com/search?q=" + a + "x%5E2%2B" + b + "*x%2B" + c);
+        //wV.loadUrl("https://www.google.com/search?q=" + a + "x%5E2%2B" + b + "*x%2B" + c);
+        wV.loadUrl("https://mathforyou.net/en/online/equation/arbitrary/?e0=" + a + "x%5E2%2B" + b + "*x%2B" + c + "&v0=x&o0=1&from=google");
     }
 
     public void solveEquation(){

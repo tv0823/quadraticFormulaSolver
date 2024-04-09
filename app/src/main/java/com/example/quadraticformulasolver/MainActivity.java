@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     TextView showRootAns;
     String aStr, bStr, cStr;
     Random rnd = new Random();
-    ;
     final int REQUEST_CODE = 3602;
 
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int source, int result, Intent data_back) {
+    protected void onActivityResult(int source, int result, @Nullable Intent data_back) {
         super.onActivityResult(source, result, data_back);
         if (data_back != null) {
             showRootAns.setText("The answers are:\n" + data_back.getStringExtra("ans"));

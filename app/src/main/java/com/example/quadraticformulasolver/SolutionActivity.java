@@ -38,8 +38,10 @@ public class SolutionActivity extends AppCompatActivity {
         createAns();
 
         showAns.setText(ans);
-        //wV.loadUrl("https://www.google.com/search?q=" + a + "x%5E2%2B" + b + "*x%2B" + c);
-        wV.loadUrl("https://mathforyou.net/en/online/equation/arbitrary/?e0=" + a + "x%5E2%2B" + b + "*x%2B" + c + "&v0=x&o0=1&from=google");
+        if(c>=0)
+            wV.loadUrl("https://www.wolframalpha.com/input?i=graph+%5B%2F%2Fmath%3A" + a + "x%5E2%2B" + b + "x%2B" + c + "%2F%2F%5D");
+        else
+            wV.loadUrl("https://www.wolframalpha.com/input?i=graph+%5B%2F%2Fmath%3A" + a + "x%5E2%2B" + b + "x" + c + "%2F%2F%5D");
     }
 
     public void solveEquation(){

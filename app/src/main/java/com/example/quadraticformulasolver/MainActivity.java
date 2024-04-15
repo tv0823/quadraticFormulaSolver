@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     EditText a, b, c;
-    Intent si;
     TextView showRootAns;
     String aStr, bStr, cStr;
     Random rnd = new Random();
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         c = findViewById(R.id.c);
 
         showRootAns = findViewById(R.id.showRootAns);
-
-        si = new Intent(this, SolutionActivity.class);
     }
 
     public void randomNums(View view) {
@@ -45,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getValues(View view) {
+        Intent si = new Intent(this, SolutionActivity.class);
         aStr = a.getText().toString();
         bStr = b.getText().toString();
         cStr = c.getText().toString();

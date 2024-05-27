@@ -38,11 +38,8 @@ public class SolutionActivity extends AppCompatActivity {
         createAns();
 
         showAns.setText(ans);
-        if(c>=0)
-            wV.loadUrl("https://www.wolframalpha.com/input?i=graph+%5B%2F%2Fmath%3A" + a + "x%5E2%2B" + b + "x%2B" + c + "%2F%2F%5D");
-        else
-            wV.loadUrl("https://www.wolframalpha.com/input?i=graph+%5B%2F%2Fmath%3A" + a + "x%5E2%2B" + b + "x" + c + "%2F%2F%5D");
-    }
+        wV.loadUrl("https://mathforyou.net/en/online/equation/arbitrary/?e0=" + a + "x%5E2%2B" + b + "*x%2B" + c + "&v0=x&o0=1&from=google");
+        }
 
     public void solveEquation(){
         discriminant = b*b-4*a*c;
@@ -67,7 +64,7 @@ public class SolutionActivity extends AppCompatActivity {
     }
 
     private class MyWebViewClient extends WebViewClient {
-        public boolean shouldOverideUrlLoading(WebView view, String url) {
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;
         }
